@@ -104,14 +104,8 @@ body {
   opacity: 0.4;
   
 }
-.complete-btn:hover {
-  background-color: rgba(255, 169, 231, 0.3);
 
-}
-.complete-btn:hover  img{
-  opacity: 0.4;
-  
-}
+
 .completed {
   text-decoration: line-through;
 }
