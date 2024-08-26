@@ -68,9 +68,13 @@ function TasksContainer({ tasks, onDelete }) {
 
 function Task({ task, onDelete }) {
   const [completed, setCompleted] = useState("");
+  const [CompleteImg , setCompleteImg] = useState(null);
+
   function CompleteTaskHandler() {
     if (completed === "") setCompleted("completed");
     else setCompleted("");
+    if (CompleteImg === null) setCompleteImg(<img src="check.png" alt="check icon" />);
+    else setCompleteImg(null);
   }
 
   function DeleteTaskHandler() {
@@ -79,7 +83,7 @@ function Task({ task, onDelete }) {
 
   return (
     <div className="task">
-      <Completed CompleteTaskHandler={CompleteTaskHandler} />
+      <Completed CompleteTaskHandler={CompleteTaskHandler} img={CompleteImg}/>
       <TaskText
         taskText={task.text}
         CompleteTaskHandler={CompleteTaskHandler}
@@ -90,10 +94,10 @@ function Task({ task, onDelete }) {
   );
 }
 
-function Completed({ CompleteTaskHandler }) {
+function Completed({ CompleteTaskHandler, img }) {
   return (
     <button className="complete-btn" onClick={CompleteTaskHandler}>
-      <img src="check.png" alt="check icon" />
+      {img}
     </button>
   );
 }
