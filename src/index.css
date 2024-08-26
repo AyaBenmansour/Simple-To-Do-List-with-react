@@ -8,7 +8,16 @@ body {
   box-sizing: border-box;
   width:100vw;
   height: 100vh;
-  background-image: linear-gradient(#210B2C , #120315);
+  background-image: linear-gradient(to right, #210B2C, #120315);
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lobster Two';
+  src: url('LobsterTwo-Bold.ttf') format('truetype');
 }
 .app {
   display: flex;
@@ -16,7 +25,7 @@ body {
   align-items: center;
   text-decoration: none;
   width: 700px;
-  font-family: Raleway,'Courier New', Courier, monospace;
+  font-family: 'Raleway';
   height:100vh;
   padding-top: 100px;
   border-radius: 15px;
@@ -67,7 +76,7 @@ body {
 .input-field , .complete-btn , .delete-btn  {
   border: none;
   outline: none;
-  font-family: Raleway,'Courier New', Courier, monospace;
+  font-family: 'Raleway';
 }
 .add-btn {
   text-align: center;
@@ -75,7 +84,7 @@ body {
   height: 60%;
   border: none;
   outline: none;
-  font-family: Raleway,'Courier New', Courier, monospace;
+  font-family: 'Raleway';
   border-radius: 10px;
   font-size: 16x;
   background-color: rgba(255, 169, 231, 0.47);
@@ -143,7 +152,7 @@ body {
   justify-content: center;
 }
 .title {
-  font-family:"Lobster Two", "Helvetica Neue", Arial, Helvetica;
+  font-family:"Lobster Two";
   font-size: 50px;
   height: 80px;
   color:#FFA9E7;
@@ -161,7 +170,7 @@ body {
 }
 @media(max-width:550px){
   .app {
-    width: 400px;
+    width: 350px;
   }
   .input-cnt {
     width: 94%;
