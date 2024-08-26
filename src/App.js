@@ -69,7 +69,7 @@ function TasksContainer({ tasks, onDelete }) {
 function Task({ task, onDelete }) {
   const [completed, setCompleted] = useState("");
   function CompleteTaskHandler() {
-    if (completed == "") setCompleted("completed");
+    if (completed === "") setCompleted("completed");
     else setCompleted("");
   }
 
